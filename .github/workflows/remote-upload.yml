@@ -44,8 +44,8 @@ jobs:
         env:
           REFRESH_TOKEN: ${{ secrets[github.event.client_payload.accountKey] }}
           PARENT_FOLDER_ID: ${{ github.event.client_payload.parentFolderId || secrets[github.event.client_payload.parentKey] }}
-          CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
-          CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           FILENAME: ${{ steps.download.outputs.filename }}
           URL: ${{ github.event.client_payload.url }}
         run: |
